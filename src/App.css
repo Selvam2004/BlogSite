@@ -1,0 +1,39 @@
+.App {
+  color: white;
+}
+h2{
+  text-align: center;
+}
+
+body{
+  background-color: #282c34;
+  color: aliceblue;
+}
+label{
+  display: block;
+  text-decoration: underline;
+  padding-bottom: 10px;
+  transition: top .45s cubic-bezier(.44, .99, .48, 1);
+}
+.cont{
+  display:none;
+ 
+  transition:all 5s linear;
+}
+#check{
+  display:none;
+} 
+ #check:checked ~ .cont{ 
+  display: block;
+ }
+ #check:checked ~ label{
+  visibility: hidden;
+ }
+#check:checked ~ label:after{
+  text-decoration: underline;
+  font-size: 20px;
+  text-align: center;
+  content:"show less";
+  display: block;
+  visibility: visible;
+}
